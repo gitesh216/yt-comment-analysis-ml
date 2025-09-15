@@ -1,7 +1,5 @@
 from googleapiclient.discovery import build
-import streamlit as st
-
-API_KEY = st.secrets["YOUTUBE"]["API_KEY"]
+from utils.config import API_KEY
 
 def get_video_details(video_id):
     youtube = build('youtube', 'v3', developerKey=API_KEY)
